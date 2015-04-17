@@ -37,8 +37,8 @@ android {
         applicationId "com.tspoon.androidtoolbelt"
         minSdkVersion 9
         targetSdkVersion 22
-        versionCode 2
-        versionName "1.0.1"
+        versionCode 3
+        versionName "1.0.2"
         manifestPlaceholders = [ crashlyticsKey:crashlyticsKey ]
     }
     buildTypes {

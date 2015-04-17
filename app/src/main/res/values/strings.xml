@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Android Developer Toolbelt</string>
+    <string name="app_name_short">Android Toolbelt</string>
+
+    <string name="url_play_store">https://play.google.com/store/apps/details?id=com.tspoon.androidtoolbelt</string>
+    <string name="url_github">https://github.com/T-Spoon/Android-Developer-Toolbelt</string>
+    <string name="url_share">@string/url_play_store</string>
+
+    <string name="action_share">Share</string>
+    <string name="action_github">Github</string>
+
+    <string name="nav_memory">Memory</string>
+
+    <string name="memory_title_total">Total:</string>
+    <string name="memory_title_free">Free:</string>
+    <string name="memory_title_low">Low Memory:</string>
+
+    <string name="memory_arc_bottom">FREE RAM</string>
+    <string name="memory_arc_subtitle">%1$d MB / %2$d MB</string>
+
+    <string name="memory_fill_start">Fill Memory</string>
+    <string name="memory_fill_stop">Stop</string>
+</resources>

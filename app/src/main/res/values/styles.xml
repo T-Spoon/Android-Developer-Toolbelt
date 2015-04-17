@@ -1,0 +1,66 @@
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base"/>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="actionModeBackground">@color/colorPrimary</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerToggleArrow</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@color/textColorPrimaryInverse</item>
+        <!-- <item name="textColorPrimaryInverse">@color/textColorPrimaryInverse</item> -->
+        <item name="actionMenuTextColor">@color/textColorPrimaryInverse</item>
+        <item name="android:textColorSecondary">@color/textColorPrimaryInverse</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="AppTheme.DrawerToggleArrow" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/textColorPrimaryInverse</item>
+    </style>
+
+    <style name="AppTheme.SlidingTabLayout" parent="AppTheme">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.TextView.Large" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="AppTheme.TextView.Display" parent="TextAppearance.AppCompat.Display1">
+    </style>
+
+    <style name="AppTheme.TextView.Megabyte" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">MB</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="AppTheme.Table.Row" parent="AppTheme">
+        <item name="android:minHeight">@dimen/abc_text_size_display_2_material</item>
+    </style>
+
+    <style name="AppTheme.Widget.Button" parent="AppTheme">
+        <item name="android:background">@drawable/selector_button</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_600">#43A047</color>
+
+    <color name="material_blue_grey_500">#607D8B</color>
+    <color name="material_blue_grey_600">#546E7A</color>
+
+    <color name="colorPrimary">@color/material_blue_grey_500</color>
+    <color name="colorPrimaryDark">@color/material_blue_grey_600</color>
+    <color name="textColorPrimary">#333</color>
+    <color name="textColorPrimaryInverse">#FFF</color>
+</resources>

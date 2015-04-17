@@ -17,6 +17,7 @@ import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Random;
 
 import javax.lang.model.element.Modifier;
 
@@ -66,7 +67,7 @@ public class MemoryServiceWriter implements SourceWriter {
     }
 
     private FieldSpec createFieldAllocations() {
-        return FieldSpec.builder(ParameterizedTypeName.get(ArrayList.class, Byte[].class), "mAllocations", Modifier.PRIVATE, Modifier.FINAL)
+        return FieldSpec.builder(ParameterizedTypeName.get(ClassName.get(ArrayList.class), ClassName.bestGuess("com.tspoon.androidtoolbelt.utils.ByteArrayWrapper")), "mAllocations", Modifier.PRIVATE, Modifier.FINAL)
                 .initializer("new $T<>()", ArrayList.class)
                 .build();
     }
@@ -121,7 +122,9 @@ public class MemoryServiceWriter implements SourceWriter {
                 .addStatement("$T.d(\"Attempting Allocation...\")", Timber.class)
 
                 .beginControlFlow("if(!$T.get(getApplicationContext()).isLowMemory())", CLASS_MEMORY_UTILS)
-                .addStatement("mAllocations.add(new Byte[1024 * 1024 * 2])")
+                .addStatement("byte[] bytes = new byte[1024 * 1024 * 2]")
+                .addStatement("new $T().nextBytes(bytes)", Random.class)
+                .addStatement("mAllocations.add(new ByteArrayWrapper(bytes))")
                 .addStatement("$T.d(\"Allocated new block\")", Timber.class)
 
                 .beginControlFlow("try")

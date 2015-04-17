@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.tspoon.androidtoolbelt">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
 
     <application
@@ -110,6 +111,4 @@
             android:name="com.crashlytics.ApiKey"
             android:value="${crashlyticsKey}"/>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

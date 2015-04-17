@@ -9,7 +9,7 @@ import java.util.List;
 
 import timber.log.Timber;
 
-public class ServiceHolderImplSample implements ServiceHolder {
+public class ServiceHolderImplTest implements ServiceHolder {
 
     private static final List<Class<? extends Service>> SERVICES = new ArrayList<Class<? extends Service>>() {{
         add(MemoryService.class);

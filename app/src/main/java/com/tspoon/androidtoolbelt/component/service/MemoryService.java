@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.Messenger;
 
+import com.tspoon.androidtoolbelt.utils.ByteArrayWrapper;
 import com.tspoon.androidtoolbelt.utils.MemoryUtils;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import timber.log.Timber;
 
@@ -15,7 +17,7 @@ public class MemoryService extends IntentService {
 
     private final Messenger mMessenger;
 
-    private ArrayList<Byte[]> mAllocations = new ArrayList<>();
+    private ArrayList<ByteArrayWrapper> mAllocations = new ArrayList<>();
     private Boolean mRun;
 
     public MemoryService() {
@@ -36,7 +38,9 @@ public class MemoryService extends IntentService {
             Timber.d("Attempting Allocation...");
 
             if (MemoryUtils.isMemoryAvailable()) {
-                mAllocations.add(new Byte[1024 * 1024 * 5]);
+                byte[] bytes = new byte[1024 * 1024 * 5];
+                new Random().nextBytes(bytes);
+                mAllocations.add(new ByteArrayWrapper(bytes));
                 Timber.d("Allocated new block");
             }
 
@@ -47,4 +51,5 @@ public class MemoryService extends IntentService {
             }
         }
     }
+
 }
